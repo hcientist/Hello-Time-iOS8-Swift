@@ -42,6 +42,28 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBOutlet weak var modeButton: UIButton!
 
+    @IBAction func toggleMode(sender: AnyObject) {
+        var halfish = 122.0/255.0
+        var blue = UIColor(red: CGFloat(0), green: CGFloat(halfish), blue: CGFloat(1), alpha: CGFloat(1))
+        var green = UIColor(red: CGFloat(0), green: CGFloat(1), blue: CGFloat(halfish), alpha: CGFloat(1))
+        if (self.modeButton.titleLabel?.text == "Night") {
+            self.view.backgroundColor = UIColor.blackColor()
+            self.timeLabel.textColor = UIColor.whiteColor()
+            self.modeButton.setTitle("Day", forState: UIControlState.Normal)
+            self.modeButton.setTitleColor(green, forState: UIControlState.Normal)
+            
+        } else {
+            self.view.backgroundColor = UIColor.whiteColor()
+            self.timeLabel.textColor = UIColor.blackColor()
+            self.modeButton.setTitle("Night", forState: UIControlState.Normal)
+            self.modeButton.setTitleColor(blue, forState: UIControlState.Normal)
+
+        }
+    }
+    
+    
 }
 

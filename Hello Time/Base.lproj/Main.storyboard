@@ -22,14 +22,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDq-gY-Jj8">
+                                <rect key="frame" x="277" y="550" width="37" height="30"/>
+                                <state key="normal" title="Night">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DGL-Ed-ZsX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uDq-gY-Jj8" secondAttribute="centerX" id="Fj4-Rg-jff"/>
                             <constraint firstAttribute="centerX" secondItem="My7-ca-t8A" secondAttribute="centerX" id="XZq-m9-3gO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uDq-gY-Jj8" secondAttribute="bottom" constant="20" id="hXG-PG-GHt"/>
                             <constraint firstAttribute="centerY" secondItem="My7-ca-t8A" secondAttribute="centerY" id="q0h-sK-STY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="modeButton" destination="uDq-gY-Jj8" id="FYM-N5-QHE"/>
                         <outlet property="timeLabel" destination="My7-ca-t8A" id="3g3-b9-day"/>
                     </connections>
                 </viewController>
